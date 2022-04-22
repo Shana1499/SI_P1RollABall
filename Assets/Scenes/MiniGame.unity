@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6556604, g: 1, b: 0.9209294, a: 0.44705883}
+  m_Color: {r: 0.6556604, g: 1, b: 0.9209294, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3333,7 +3333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  timer: 80
+  timer: 70
   nPickUp: 16
   countText: {fileID: 1516970916}
   winTextObject: {fileID: 1164940990}
