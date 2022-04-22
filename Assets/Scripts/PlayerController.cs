@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float timer;
     private float cuentaAtras;
+    public int nPickUp;
 
     public TextMeshProUGUI countText;// puntuacion
     public GameObject winTextObject;//ventana final 
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI Puntuacion;// Texto de la puntuacion
     public TextMeshProUGUI MejorPuntuacion;// Texto de la puntuacion
     public TextMeshProUGUI InicioText;// Cuentra atras Inicio
+
+    public GameObject CoinSound;//Objeto donde esta el efecto de sonido de los pickup
 
 
     private float movementX;
@@ -105,6 +108,7 @@ public class PlayerController : MonoBehaviour
         // ..and if the GameObject you intersect has the tag 'Pick Up' assigned to it..
         if (other.gameObject.CompareTag("PickUp"))
         {
+            Instantiate(CoinSound);
             other.gameObject.SetActive(false);
 
             // Add one to the score variable 'count'
@@ -114,7 +118,7 @@ public class PlayerController : MonoBehaviour
             SetCountText();
 
 
-            if (count >= 8)
+            if (count >= nPickUp)
             {
                 //compruebo si la puntuacion guardada es menor que la nueva
                 if (PlayerPrefs.GetInt("MejorPuntaje", 0) < count)
