@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
             {
                 SetCountText();
 
-                if (count >= 8)
+                if (count >= nPickUp)
                 {
                     FinalText.text = "Has Ganado!!!";
                 }
